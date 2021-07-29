@@ -1,0 +1,99 @@
+$mainColor: #ff0000;
+$textColor: #000;
+$whiteColor: #fff;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*[disabled] {
+  position: relative;
+  z-index: 5;
+  color: #cecece;
+  svg {
+    path {
+      fill: #cecece;
+    }
+  }
+  &::after {
+    display: none;
+    content: "В разработке";
+    color: #fff;
+    white-space: nowrap;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left: 0;
+    transform: translateX(0);
+    height: 40px;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  &:hover {
+    &::after {
+      display: block;
+    }
+  }
+}
+
+body {
+  height: 100vh;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+}
+
+input,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  background-color: $whiteColor;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 100px;
+  width: 100%;
+}
+
+.df {
+  display: flex;
+}
+.aic {
+  align-items: center;
+}
+.jcc {
+  justify-content: center;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.fldc {
+  flex-direction: column;
+}
+.fldr {
+  flex-direction: row;
+}
+
+.cur {
+  cursor: pointer;
+}
