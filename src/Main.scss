@@ -10,37 +10,6 @@ $whiteColor: #fff;
   padding: 0;
 }
 
-*[disabled] {
-  position: relative;
-  z-index: 5;
-  color: #cecece;
-  svg {
-    path {
-      fill: #cecece;
-    }
-  }
-  &::after {
-    display: none;
-    content: "В разработке";
-    color: #fff;
-    white-space: nowrap;
-    position: absolute;
-    z-index: 10;
-    top: 100%;
-    left: 0;
-    transform: translateX(0);
-    height: 40px;
-    background-color: red;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  &:hover {
-    &::after {
-      display: block;
-    }
-  }
-}
-
 body {
   height: 100vh;
   font-size: 14px;
@@ -69,10 +38,23 @@ li {
   list-style: none;
 }
 
+#root,
+.wrapper {
+  height: 100%;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
 .container {
-  margin: 0 auto;
-  padding: 0 100px;
   width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+  @media screen and (max-width: 970px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .df {
@@ -87,6 +69,12 @@ li {
 .jcsb {
   justify-content: space-between;
 }
+.jcsa {
+  justify-content: space-around;
+}
+.jcfe {
+  justify-content: flex-end;
+}
 .fldc {
   flex-direction: column;
 }
@@ -96,4 +84,13 @@ li {
 
 .cur {
   cursor: pointer;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .page-wrapper {
+    flex: 1;
+  }
 }

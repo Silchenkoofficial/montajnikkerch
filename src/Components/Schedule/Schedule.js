@@ -86,7 +86,7 @@ function Schedule() {
           }, 0);
         }}
       >
-        {days[today - 1]?.day}: {days[today - 1]?.time}{" "}
+        {days[today - 1]?.day}: {days[today - 1]?.time}&nbsp;
         <i className="fas fa-chevron-down"></i>
       </div>
       {isScheduleShown && (

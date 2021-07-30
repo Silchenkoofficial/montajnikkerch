@@ -2,8 +2,10 @@
   color: #000;
   font-size: 12px;
   font-weight: 600;
+  margin-bottom: 10px;
   &__top {
     padding: 10px 100px;
+    flex: 1;
     display: flex;
     align-items: center;
     background-color: #242424;
@@ -48,7 +50,8 @@
     }
   }
   &__bottom {
-    padding: 10px 100px;
+    padding: 10px 100px 0;
+    flex: 1;
   }
   &__logo {
     margin-right: 20px;
@@ -89,6 +92,83 @@
           border-radius: 50%;
           background-color: red;
           color: white;
+        }
+      }
+    }
+  }
+}
+
+.tablet {
+  // position: sticky;
+  // top: 0;
+  // left: 0;
+  // z-index: 999;
+  margin-bottom: 10px;
+  &__top {
+    color: #fff;
+    padding: 5px 0;
+    background-color: #242424;
+    .logo {
+      padding: 5px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+    .daily__schedule {
+      margin-left: 20px;
+    }
+  }
+  &__bottom {
+    padding: 5px 0;
+    background-color: #f00;
+    .tablet__search {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &--input {
+        width: 90%;
+        padding: 12px 15px;
+        display: flex;
+        background-color: #fff;
+        border-radius: 25px;
+        img {
+          opacity: 0.3;
+        }
+        input {
+          margin-left: 8px;
+          width: 100%;
+        }
+      }
+    }
+    .tablet__buttons {
+      .button {
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      .cart {
+        position: relative;
+        .badge {
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          width: 17px;
+          height: 17px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background-color: #fff;
+          color: #f00;
+          font-weight: bold;
         }
       }
     }
